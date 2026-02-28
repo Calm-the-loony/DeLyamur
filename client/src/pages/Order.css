@@ -1,0 +1,271 @@
+.order-section {
+  padding: 80px 0;
+  background-color: var(--light-color);
+}
+
+.order-steps {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  margin: 50px 0;
+}
+
+.step {
+  display: flex;
+  gap: 20px;
+  background: var(--white);
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: var(--shadow);
+  transition: var(--transition);
+}
+
+.step:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.step-number {
+  width: 50px;
+  height: 50px;
+  background-color: var(--primary-color);
+  color: var(--white);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 1.5rem;
+  flex-shrink: 0;
+}
+
+.step-content h3 {
+  margin-bottom: 10px;
+  color: var(--dark-color);
+  font-size: 1.3rem;
+}
+
+.step-content p {
+  color: var(--secondary-color);
+  margin-bottom: 15px;
+  line-height: 1.6;
+}
+
+.btn-small {
+  padding: 8px 20px;
+  font-size: 0.9rem;
+  background-color: var(--primary-color);
+  color: white;
+  border-radius: 25px;
+  text-decoration: none;
+  display: inline-block;
+  transition: var(--transition);
+  border: none;
+  cursor: pointer;
+}
+
+.btn-small:hover {
+  background-color: var(--primary-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.btn-call {
+  background-color: #28a745;
+}
+
+.btn-call:hover {
+  background-color: #218838;
+}
+
+.order-benefits {
+  padding: 80px 0;
+  background-color: var(--white);
+}
+
+.benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.benefit-card {
+  text-align: center;
+  padding: 30px 20px;
+  background: var(--white);
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  transition: var(--transition);
+}
+
+.benefit-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow);
+}
+
+.benefit-card i {
+  font-size: 2.5rem;
+  color: var(--primary-color);
+  margin-bottom: 15px;
+}
+
+.benefit-card h3 {
+  margin-bottom: 10px;
+  color: var(--dark-color);
+}
+
+.benefit-card p {
+  color: var(--secondary-color);
+  font-size: 0.95rem;
+}
+
+.bouquet-examples {
+  padding: 80px 0;
+  background-color: var(--light-color);
+}
+
+.bouquet-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.bouquet-card {
+  display: block;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  transition: var(--transition);
+  color: var(--dark-color);
+  text-decoration: none;
+  background: white;
+}
+
+.bouquet-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+.bouquet-image {
+  height: 250px;
+  background-size: cover;
+  background-position: center;
+}
+
+.bouquet-info {
+  padding: 20px;
+  text-align: center;
+}
+
+.bouquet-info h3 {
+  margin-bottom: 5px;
+  font-size: 1.2rem;
+}
+
+.bouquet-info p {
+  color: var(--primary-color);
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+.contacts {
+  padding: 80px 0;
+  background-color: var(--white);
+}
+
+.contacts-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.contact-card {
+  text-align: center;
+  padding: 30px 20px;
+  background: var(--white);
+  border-radius: 10px;
+  box-shadow: var(--shadow);
+  transition: var(--transition);
+}
+
+.contact-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.contact-card i {
+  font-size: 2rem;
+  color: var(--primary-color);
+  margin-bottom: 15px;
+}
+
+.contact-card h3 {
+  margin-bottom: 10px;
+  color: var(--dark-color);
+}
+
+.contact-card p {
+  color: var(--secondary-color);
+  margin-bottom: 5px;
+}
+
+.contact-card a {
+  color: var(--dark-color);
+  transition: var(--transition);
+  text-decoration: none;
+}
+
+.contact-card a:hover {
+  color: var(--primary-color);
+}
+
+@media (max-width: 768px) {
+  .order-section,
+  .order-benefits,
+  .bouquet-examples,
+  .contacts {
+    padding: 60px 0;
+  }
+  
+  .step {
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+  }
+  
+  .step-number {
+    margin-bottom: 15px;
+  }
+  
+  .order-steps,
+  .benefits-grid,
+  .bouquet-grid,
+  .contacts-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .bouquet-image {
+    height: 200px;
+  }
+}
+
+@media (max-width: 576px) {
+  .step {
+    padding: 20px;
+  }
+  
+  .step-content h3 {
+    font-size: 1.2rem;
+  }
+  
+  .benefit-card {
+    padding: 25px 15px;
+  }
+  
+  .contact-card {
+    padding: 25px 15px;
+  }
+}

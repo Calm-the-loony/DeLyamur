@@ -1,0 +1,739 @@
+/* About.css - абсолютно уникальные имена классов */
+
+/* Hero секция */
+.aboutUnique-hero {
+  position: relative;
+  padding: 120px 0 80px;
+  background: linear-gradient(135deg, #fff 0%, #fbfaff 100%);
+  overflow: hidden;
+}
+
+.aboutUnique-hero::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  right: -10%;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(232, 62, 140, 0.03) 0%, transparent 70%);
+  border-radius: 50%;
+  z-index: 0;
+}
+
+.aboutUnique-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+  position: relative;
+  z-index: 2;
+}
+
+.aboutUnique-heroContent {
+  position: relative;
+  z-index: 2;
+  max-width: 700px;
+}
+
+.aboutUnique-heroLabel {
+  display: inline-block;
+  font-size: 0.85rem;
+  font-weight: 300;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: #e83e8c;
+  margin-bottom: 1.5rem;
+  opacity: 0.8;
+}
+
+.aboutUnique-heroTitle {
+  font-size: 4rem;
+  font-weight: 200;
+  line-height: 1.1;
+  color: #333;
+  margin-bottom: 1.5rem;
+  letter-spacing: -1px;
+}
+
+.aboutUnique-heroDescription {
+  font-size: 1.2rem;
+  color: #6c757d;
+  font-weight: 300;
+  line-height: 1.8;
+  max-width: 600px;
+}
+
+.aboutUnique-heroDecoration {
+  position: absolute;
+  bottom: 40px;
+  right: 40px;
+  width: 200px;
+  height: 200px;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.aboutUnique-decorationCircle {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 150px;
+  height: 150px;
+  border: 2px solid #e83e8c;
+  border-radius: 50%;
+  opacity: 0.2;
+}
+
+.aboutUnique-decorationLine {
+  position: absolute;
+  bottom: 50px;
+  right: 50px;
+  width: 100px;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #e83e8c, transparent);
+  transform: rotate(-45deg);
+}
+
+/* История */
+.aboutUnique-history {
+  padding: 100px 0;
+  background-color: #fff;
+}
+
+.aboutUnique-historyContent {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.aboutUnique-historyLabel {
+  display: inline-block;
+  font-size: 0.85rem;
+  font-weight: 300;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #e83e8c;
+  margin-bottom: 1rem;
+  opacity: 0.7;
+}
+
+.aboutUnique-historyTitle {
+  font-size: 2.8rem;
+  font-weight: 300;
+  color: #333;
+  margin-bottom: 2rem;
+  letter-spacing: -0.5px;
+}
+
+.aboutUnique-historyDescription p {
+  font-size: 1rem;
+  color: #6c757d;
+  line-height: 1.8;
+  margin-bottom: 1.5rem;
+  font-weight: 300;
+}
+
+.aboutUnique-historyDescription p:last-child {
+  margin-bottom: 0;
+}
+
+.aboutUnique-historyImage {
+  position: relative;
+}
+
+.aboutUnique-historyImage img {
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+  border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+  box-shadow: 0 30px 60px -15px rgba(232, 62, 140, 0.2);
+}
+
+.aboutUnique-imageFrame {
+  position: absolute;
+  top: -20px;
+  left: -20px;
+  right: 20px;
+  bottom: 20px;
+  border: 2px solid #e83e8c;
+  border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+  opacity: 0.3;
+  z-index: -1;
+}
+
+.aboutUnique-experienceBadge {
+  position: absolute;
+  bottom: -20px;
+  left: -20px;
+  background: linear-gradient(135deg, #e83e8c, #d12d7b);
+  color: #fff;
+  padding: 25px;
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  box-shadow: 0 15px 30px rgba(232, 62, 140, 0.3);
+}
+
+.aboutUnique-expNumber {
+  font-size: 2rem;
+  font-weight: 300;
+  line-height: 1;
+  margin-bottom: 5px;
+}
+
+.aboutUnique-expText {
+  font-size: 0.7rem;
+  font-weight: 300;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  opacity: 0.9;
+}
+
+/* Ценности */
+.aboutUnique-values {
+  padding: 100px 0;
+  background-color: #faf9f7;
+}
+
+.aboutUnique-valuesHeader {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.aboutUnique-valuesSubtitle {
+  font-size: 0.85rem;
+  font-weight: 300;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #e83e8c;
+  opacity: 0.7;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.aboutUnique-valuesTitle {
+  font-size: 2.8rem;
+  font-weight: 300;
+  color: #333;
+  margin: 0;
+  letter-spacing: -0.5px;
+}
+
+.aboutUnique-valuesGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.aboutUnique-valueCard {
+  text-align: center;
+  padding: 40px 30px;
+  background: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.03);
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.aboutUnique-valueCard:hover {
+  transform: translateY(-10px);
+  border-color: rgba(232, 62, 140, 0.2);
+  box-shadow: 0 20px 40px -10px rgba(232, 62, 140, 0.1);
+}
+
+.aboutUnique-valueNumber {
+  display: block;
+  font-size: 3rem;
+  font-weight: 200;
+  color: #e83e8c;
+  opacity: 0.3;
+  margin-bottom: 1rem;
+  line-height: 1;
+}
+
+.aboutUnique-valueTitle {
+  font-size: 1.5rem;
+  font-weight: 300;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.aboutUnique-valueDescription {
+  font-size: 0.95rem;
+  color: #6c757d;
+  line-height: 1.7;
+  font-weight: 300;
+  margin-bottom: 2rem;
+}
+
+.aboutUnique-valueLine {
+  width: 40px;
+  height: 2px;
+  background: linear-gradient(90deg, #e83e8c, transparent);
+  margin: 0 auto;
+}
+
+/* Команда - акцентная версия */
+.aboutUnique-team {
+  padding: 100px 0;
+  background: linear-gradient(135deg, #fff 0%, #fbfaff 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.aboutUnique-team::before {
+  content: '';
+  position: absolute;
+  bottom: -30%;
+  left: -10%;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(232, 62, 140, 0.03) 0%, transparent 70%);
+  border-radius: 50%;
+  z-index: 0;
+}
+
+.aboutUnique-teamHeader {
+  text-align: center;
+  margin-bottom: 60px;
+  position: relative;
+  z-index: 2;
+}
+
+.aboutUnique-teamSubtitle {
+  font-size: 0.85rem;
+  font-weight: 300;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #e83e8c;
+  opacity: 0.7;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.aboutUnique-teamTitle {
+  font-size: 2.8rem;
+  font-weight: 300;
+  color: #333;
+  margin: 0;
+  letter-spacing: -0.5px;
+}
+
+.aboutUnique-teamGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  max-width: 1100px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+}
+
+.aboutUnique-teamCard {
+  background: #fff;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 20px 40px -10px rgba(232, 62, 140, 0.15);
+  transition: all 0.4s ease;
+  position: relative;
+  border: 1px solid rgba(232, 62, 140, 0.1);
+}
+
+.aboutUnique-teamCard:hover {
+  transform: translateY(-15px);
+  box-shadow: 0 30px 60px -10px rgba(232, 62, 140, 0.25);
+  border-color: #e83e8c;
+}
+
+.aboutUnique-teamCard::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 5px;
+  background: linear-gradient(90deg, #e83e8c, #d12d7b);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.aboutUnique-teamCard:hover::after {
+  opacity: 1;
+}
+
+.aboutUnique-memberImageWrapper {
+  position: relative;
+  aspect-ratio: 1/1;
+  overflow: hidden;
+}
+
+.aboutUnique-memberImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.8s ease;
+}
+
+.aboutUnique-teamCard:hover .aboutUnique-memberImage {
+  transform: scale(1.1);
+}
+
+.aboutUnique-imageOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(232, 62, 140, 0.2), rgba(232, 62, 140, 0.05));
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.aboutUnique-teamCard:hover .aboutUnique-imageOverlay {
+  opacity: 1;
+}
+
+.aboutUnique-memberInfo {
+  padding: 30px 25px 35px;
+  text-align: center;
+  position: relative;
+  background: #fff;
+}
+
+.aboutUnique-memberInfo::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50px;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #e83e8c, transparent);
+}
+
+.aboutUnique-memberAccent {
+  display: inline-block;
+  font-size: 0.7rem;
+  font-weight: 300;
+  letter-spacing: 1px;
+  color: #e83e8c;
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+}
+
+.aboutUnique-memberName {
+  font-size: 1.5rem;
+  font-weight: 300;
+  color: #333;
+  margin-bottom: 0.3rem;
+  letter-spacing: -0.3px;
+}
+
+.aboutUnique-memberPosition {
+  font-size: 0.9rem;
+  color: #e83e8c;
+  margin-bottom: 1rem;
+  font-weight: 300;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.aboutUnique-memberDescription {
+  font-size: 0.9rem;
+  color: #6c757d;
+  line-height: 1.7;
+  font-weight: 300;
+  margin: 0;
+}
+
+/* Контакты */
+.aboutUnique-contacts {
+  padding: 100px 0;
+  background-color: #faf9f7;
+}
+
+.aboutUnique-contactsHeader {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.aboutUnique-contactsSubtitle {
+  font-size: 0.85rem;
+  font-weight: 300;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #e83e8c;
+  opacity: 0.7;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.aboutUnique-contactsTitle {
+  font-size: 2.8rem;
+  font-weight: 300;
+  color: #333;
+  margin: 0;
+  letter-spacing: -0.5px;
+}
+
+.aboutUnique-contactsContent {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: start;
+}
+
+.aboutUnique-contactsInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.aboutUnique-contactItem {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+}
+
+.aboutUnique-contactIcon {
+  width: 50px;
+  height: 50px;
+  background: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #e83e8c;
+  border: 1px solid rgba(232, 62, 140, 0.1);
+  transition: all 0.3s ease;
+}
+
+.aboutUnique-contactItem:hover .aboutUnique-contactIcon {
+  background: #e83e8c;
+  color: #fff;
+  transform: scale(1.05);
+}
+
+.aboutUnique-contactDetail h4 {
+  font-size: 1rem;
+  font-weight: 350;
+  color: #333;
+  margin-bottom: 0.3rem;
+}
+
+.aboutUnique-contactDetail p {
+  font-size: 0.9rem;
+  color: #6c757d;
+  font-weight: 300;
+  line-height: 1.5;
+  margin: 0;
+}
+
+.aboutUnique-contactSocial {
+  display: flex;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.aboutUnique-socialLink {
+  width: 40px;
+  height: 40px;
+  border: 1px solid rgba(232, 62, 140, 0.1);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #6c757d;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.aboutUnique-socialLink:hover {
+  background: #e83e8c;
+  color: #fff;
+  border-color: #e83e8c;
+  transform: translateY(-3px);
+}
+
+.aboutUnique-mapWrapper {
+  height: 450px;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(232, 62, 140, 0.1);
+}
+
+.aboutUnique-mapWrapper iframe {
+  width: 100%;
+  height: 100%;
+  filter: grayscale(20%);
+  transition: filter 0.3s ease;
+}
+
+.aboutUnique-mapWrapper:hover iframe {
+  filter: grayscale(0%);
+}
+
+/* Адаптивность */
+@media (max-width: 1024px) {
+  .aboutUnique-heroTitle {
+    font-size: 3.5rem;
+  }
+  
+  .aboutUnique-historyTitle,
+  .aboutUnique-valuesTitle,
+  .aboutUnique-teamTitle,
+  .aboutUnique-contactsTitle {
+    font-size: 2.4rem;
+  }
+  
+  .aboutUnique-historyContent {
+    gap: 40px;
+  }
+  
+  .aboutUnique-teamGrid {
+    gap: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .aboutUnique-hero {
+    padding: 100px 0 60px;
+    text-align: center;
+  }
+  
+  .aboutUnique-heroContent {
+    margin: 0 auto;
+  }
+  
+  .aboutUnique-heroTitle {
+    font-size: 2.8rem;
+  }
+  
+  .aboutUnique-heroDescription {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .aboutUnique-historyContent {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  
+  .aboutUnique-historyImage {
+    order: -1;
+    max-width: 500px;
+    margin: 0 auto;
+  }
+  
+  .aboutUnique-historyImage img {
+    height: 400px;
+  }
+  
+  .aboutUnique-valuesGrid {
+    grid-template-columns: 1fr;
+    max-width: 400px;
+  }
+  
+  .aboutUnique-teamGrid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+  }
+  
+  .aboutUnique-contactsContent {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  
+  .aboutUnique-heroDecoration {
+    display: none;
+  }
+}
+
+@media (max-width: 576px) {
+  .aboutUnique-hero {
+    padding: 80px 0 40px;
+  }
+  
+  .aboutUnique-heroTitle {
+    font-size: 2.2rem;
+  }
+  
+  .aboutUnique-heroDescription {
+    font-size: 1rem;
+  }
+  
+  .aboutUnique-history {
+    padding: 60px 0;
+  }
+  
+  .aboutUnique-historyTitle {
+    font-size: 2rem;
+  }
+  
+  .aboutUnique-historyImage img {
+    height: 300px;
+  }
+  
+  .aboutUnique-experienceBadge {
+    width: 80px;
+    height: 80px;
+    padding: 15px;
+    bottom: -15px;
+    left: -15px;
+  }
+  
+  .aboutUnique-expNumber {
+    font-size: 1.5rem;
+  }
+  
+  .aboutUnique-expText {
+    font-size: 0.6rem;
+  }
+  
+  .aboutUnique-values,
+  .aboutUnique-team,
+  .aboutUnique-contacts {
+    padding: 60px 0;
+  }
+  
+  .aboutUnique-valuesTitle,
+  .aboutUnique-teamTitle,
+  .aboutUnique-contactsTitle {
+    font-size: 2rem;
+  }
+  
+  .aboutUnique-teamGrid {
+    grid-template-columns: 1fr;
+    max-width: 350px;
+  }
+  
+  .aboutUnique-teamCard {
+    max-width: 320px;
+    margin: 0 auto;
+  }
+  
+  .aboutUnique-memberName {
+    font-size: 1.3rem;
+  }
+  
+  .aboutUnique-contactItem {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .aboutUnique-contactSocial {
+    justify-content: center;
+  }
+  
+  .aboutUnique-mapWrapper {
+    height: 300px;
+  }
+}

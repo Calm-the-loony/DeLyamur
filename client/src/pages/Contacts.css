@@ -1,0 +1,634 @@
+/* Hero секция */
+.contactsPage-hero {
+  position: relative;
+  padding: 120px 0 80px;
+  background: linear-gradient(135deg, #fff 0%, #fbfaff 100%);
+  overflow: hidden;
+}
+
+.contactsPage-hero::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  right: -10%;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(232, 62, 140, 0.03) 0%, transparent 70%);
+  border-radius: 50%;
+  z-index: 0;
+}
+
+.contactsPage-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+  position: relative;
+  z-index: 2;
+}
+
+.contactsPage-heroContent {
+  max-width: 700px;
+}
+
+.contactsPage-heroLabel {
+  display: inline-block;
+  font-size: 0.85rem;
+  font-weight: 300;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: #e83e8c;
+  margin-bottom: 1.5rem;
+  opacity: 0.8;
+}
+
+.contactsPage-heroTitle {
+  font-size: 4rem;
+  font-weight: 200;
+  line-height: 1.1;
+  color: #333;
+  margin-bottom: 1.5rem;
+  letter-spacing: -1px;
+}
+
+.contactsPage-heroDescription {
+  font-size: 1.2rem;
+  color: #6c757d;
+  font-weight: 300;
+  line-height: 1.8;
+  max-width: 600px;
+}
+
+.contactsPage-heroDecoration {
+  position: absolute;
+  bottom: 40px;
+  right: 40px;
+  width: 200px;
+  height: 200px;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.contactsPage-decorationCircle {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 150px;
+  height: 150px;
+  border: 2px solid #e83e8c;
+  border-radius: 50%;
+  opacity: 0.2;
+}
+
+.contactsPage-decorationLine {
+  position: absolute;
+  bottom: 50px;
+  right: 50px;
+  width: 100px;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #e83e8c, transparent);
+  transform: rotate(-45deg);
+}
+
+/* Хлебные крошки */
+.contactsPage-breadcrumbs {
+  padding: 20px 0;
+  background-color: #fff;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.03);
+}
+
+.contactsPage-breadcrumbsList {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.contactsPage-breadcrumbsItem {
+  font-size: 0.85rem;
+  color: #6c757d;
+  font-weight: 300;
+  letter-spacing: 0.3px;
+}
+
+.contactsPage-breadcrumbsItem:not(:last-child)::after {
+  content: '/';
+  margin-left: 8px;
+  color: #6c757d;
+  opacity: 0.5;
+}
+
+.contactsPage-breadcrumbsLink {
+  color: #6c757d;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.contactsPage-breadcrumbsLink:hover {
+  color: #e83e8c;
+}
+
+.contactsPage-breadcrumbsCurrent {
+  color: #333;
+  font-weight: 350;
+}
+
+/* Контактная информация */
+.contactsPage-info {
+  padding: 80px 0;
+  background-color: #fff;
+}
+
+.contactsPage-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.contactsPage-card {
+  background: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.03);
+  padding: 40px 25px;
+  transition: all 0.3s ease;
+  text-align: center;
+  border-radius: 10px;
+}
+
+.contactsPage-card:hover {
+  transform: translateY(-5px);
+  border-color: #e83e8c;
+  box-shadow: 0 15px 30px -10px rgba(232, 62, 140, 0.1);
+}
+
+.contactsPage-icon {
+  width: 50px;
+  height: 50px;
+  margin: 0 auto 20px;
+  color: #e83e8c;
+  transition: transform 0.3s ease;
+}
+
+.contactsPage-icon svg {
+  width: 100%;
+  height: 100%;
+}
+
+.contactsPage-card:hover .contactsPage-icon {
+  transform: scale(1.05);
+}
+
+.contactsPage-cardTitle {
+  font-size: 1.1rem;
+  font-weight: 350;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.contactsPage-value {
+  font-size: 0.95rem;
+  color: #6c757d;
+  line-height: 1.6;
+  font-weight: 300;
+  margin: 0;
+}
+
+.contactsPage-link {
+  text-decoration: none;
+  transition: color 0.3s ease;
+  display: inline-block;
+}
+
+.contactsPage-link:hover {
+  color: #e83e8c;
+}
+
+/* Социальные сети */
+.contactsPage-social {
+  padding: 60px 0 80px;
+  background-color: #faf9f7;
+  text-align: center;
+}
+
+.contactsPage-socialHeader {
+  margin-bottom: 50px;
+}
+
+.contactsPage-socialSubtitle {
+  font-size: 0.85rem;
+  font-weight: 300;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #e83e8c;
+  opacity: 0.7;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.contactsPage-socialTitle {
+  font-size: 2.5rem;
+  font-weight: 200;
+  color: #333;
+  margin: 0;
+  letter-spacing: -0.5px;
+}
+
+.contactsPage-socialGrid {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.contactsPage-socialCard {
+  background: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.03);
+  padding: 30px 40px;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+}
+
+.contactsPage-socialCard:hover {
+  transform: translateY(-5px);
+  border-color: #e83e8c;
+  box-shadow: 0 15px 30px -10px rgba(232, 62, 140, 0.1);
+}
+
+.contactsPage-socialIcon {
+  width: 40px;
+  height: 40px;
+  margin-bottom: 15px;
+  color: #e83e8c;
+  transition: transform 0.3s ease;
+}
+
+.contactsPage-socialIcon svg {
+  width: 100%;
+  height: 100%;
+}
+
+.contactsPage-socialCard:hover .contactsPage-socialIcon {
+  transform: scale(1.05);
+}
+
+.contactsPage-socialName {
+  font-size: 0.9rem;
+  font-weight: 300;
+  color: #6c757d;
+  transition: color 0.3s ease;
+}
+
+.contactsPage-socialCard:hover .contactsPage-socialName {
+  color: #e83e8c;
+}
+
+/* CTA секция */
+.contactsPage-cta {
+  padding: 80px 0;
+  background-color: #fff;
+  border-top: 1px solid rgba(0, 0, 0, 0.03);
+}
+
+.contactsPage-ctaContent {
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.contactsPage-ctaTitle {
+  font-size: 2.2rem;
+  font-weight: 200;
+  color: #333;
+  margin-bottom: 1rem;
+  letter-spacing: -0.5px;
+}
+
+.contactsPage-ctaText {
+  font-size: 1.1rem;
+  color: #6c757d;
+  margin-bottom: 2rem;
+  font-weight: 300;
+  line-height: 1.6;
+}
+
+.contactsPage-ctaLinks {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+}
+
+.contactsPage-ctaLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.8rem;
+  color: #e83e8c;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 300;
+  letter-spacing: 1px;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid transparent;
+  transition: all 0.3s ease;
+}
+
+.contactsPage-ctaLink:hover {
+  gap: 1.2rem;
+  border-bottom-color: #e83e8c;
+}
+
+.contactsPage-linkArrow {
+  font-size: 1.2rem;
+  transition: transform 0.3s ease;
+}
+
+/* Адаптивность */
+@media (max-width: 1024px) {
+  .contactsPage-heroTitle {
+    font-size: 3.5rem;
+  }
+  
+  .contactsPage-grid {
+    gap: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .contactsPage-hero {
+    padding: 100px 0 60px;
+    text-align: center;
+  }
+  
+  .contactsPage-heroContent {
+    margin: 0 auto;
+  }
+  
+  .contactsPage-heroTitle {
+    font-size: 2.8rem;
+  }
+  
+  .contactsPage-heroDescription {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .contactsPage-heroDecoration {
+    display: none;
+  }
+  
+  .contactsPage-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    max-width: 500px;
+  }
+  
+  .contactsPage-socialGrid {
+    flex-direction: column;
+    max-width: 300px;
+  }
+  
+  .contactsPage-ctaLinks {
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+  }
+}
+
+@media (max-width: 576px) {
+  .contactsPage-heroTitle {
+    font-size: 2.2rem;
+  }
+  
+  .contactsPage-heroDescription {
+    font-size: 1rem;
+  }
+  
+  .contactsPage-info {
+    padding: 60px 0;
+  }
+  
+  .contactsPage-grid {
+    grid-template-columns: 1fr;
+    max-width: 320px;
+  }
+  
+  .contactsPage-card {
+    padding: 30px 20px;
+  }
+  
+  .contactsPage-socialTitle {
+    font-size: 2rem;
+  }
+  
+  .contactsPage-ctaTitle {
+    font-size: 1.8rem;
+  }
+  
+  .contactsPage-ctaText {
+    font-size: 1rem;
+  }
+}
+/* Новая секция: Как заказать букет */
+.contactsPage-order {
+  padding: 80px 0;
+  background: linear-gradient(135deg, #faf0f5 0%, #fff 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.contactsPage-order::before {
+  content: '';
+  position: absolute;
+  top: -30%;
+  right: -10%;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(232, 62, 140, 0.03) 0%, transparent 70%);
+  border-radius: 50%;
+  z-index: 0;
+}
+
+.contactsPage-orderCard {
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(10px);
+  border-radius: 30px;
+  padding: 60px;
+  max-width: 1000px;
+  margin: 0 auto;
+  border: 1px solid rgba(232, 62, 140, 0.1);
+  box-shadow: 0 30px 60px -20px rgba(0, 0, 0, 0.1);
+  position: relative;
+  z-index: 2;
+}
+
+.contactsPage-orderContent {
+  text-align: center;
+}
+
+.contactsPage-orderSubtitle {
+  display: inline-block;
+  font-size: 0.85rem;
+  font-weight: 300;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #e83e8c;
+  background: rgba(232, 62, 140, 0.1);
+  padding: 0.3rem 1.2rem;
+  border-radius: 30px;
+  margin-bottom: 1rem;
+}
+
+.contactsPage-orderTitle {
+  font-size: 2.5rem;
+  font-weight: 200;
+  color: #333;
+  margin-bottom: 1rem;
+  letter-spacing: -0.5px;
+}
+
+.contactsPage-orderText {
+  font-size: 1.1rem;
+  color: #6c757d;
+  margin-bottom: 3rem;
+  font-weight: 300;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.contactsPage-orderMethods {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+  margin-bottom: 40px;
+  text-align: left;
+}
+
+.contactsPage-orderMethod {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+  padding: 25px;
+  background: #fff;
+  border: 1px solid rgba(232, 62, 140, 0.1);
+  border-radius: 20px;
+  transition: all 0.3s ease;
+}
+
+.contactsPage-orderMethod:hover {
+  transform: translateY(-5px);
+  border-color: #e83e8c;
+  box-shadow: 0 15px 30px -10px rgba(232, 62, 140, 0.1);
+}
+
+.contactsPage-orderIcon {
+  width: 50px;
+  height: 50px;
+  background: rgba(232, 62, 140, 0.1);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.contactsPage-orderMethod:hover .contactsPage-orderIcon {
+  background: #e83e8c;
+}
+
+.contactsPage-orderMethod:hover .contactsPage-orderIcon svg {
+  stroke: #fff;
+}
+
+.contactsPage-orderMethodInfo h4 {
+  font-size: 1.1rem;
+  font-weight: 350;
+  color: #333;
+  margin-bottom: 0.3rem;
+}
+
+.contactsPage-orderLink {
+  display: inline-block;
+  font-size: 1rem;
+  color: #e83e8c;
+  text-decoration: none;
+  margin-bottom: 0.3rem;
+  transition: color 0.3s ease;
+}
+
+.contactsPage-orderLink:hover {
+  color: #d12d7b;
+  text-decoration: underline;
+}
+
+.contactsPage-orderMethodInfo p {
+  font-size: 0.85rem;
+  color: #6c757d;
+  font-weight: 300;
+  margin: 0;
+}
+
+.contactsPage-orderNote {
+  text-align: center;
+  padding-top: 20px;
+  border-top: 1px solid rgba(232, 62, 140, 0.1);
+}
+
+.contactsPage-orderNote p {
+  font-size: 1rem;
+  color: #e83e8c;
+  font-weight: 300;
+  margin: 0;
+}
+
+/* Адаптивность для новой секции */
+@media (max-width: 768px) {
+  .contactsPage-orderCard {
+    padding: 40px 30px;
+  }
+  
+  .contactsPage-orderTitle {
+    font-size: 2rem;
+  }
+  
+  .contactsPage-orderMethods {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  
+  .contactsPage-orderMethod {
+    padding: 20px;
+  }
+}
+
+@media (max-width: 576px) {
+  .contactsPage-orderCard {
+    padding: 30px 20px;
+  }
+  
+  .contactsPage-orderTitle {
+    font-size: 1.8rem;
+  }
+  
+  .contactsPage-orderText {
+    font-size: 1rem;
+  }
+  
+  .contactsPage-orderMethod {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .contactsPage-orderMethodInfo h4 {
+    font-size: 1rem;
+  }
+}
