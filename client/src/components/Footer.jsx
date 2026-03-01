@@ -56,24 +56,10 @@ const Footer = () => {
               </ul>
             </div>
           </div>
-
-          <div className="footer-social-block">
-            <h3 className="footer-title">Мы в соцсетях</h3>
-            <div className="footer-social">
-              <a href="#" className="social-link" aria-label="Instagram">IG</a>
-              <a href="#" className="social-link" aria-label="Telegram">TG</a>
-              <a href="#" className="social-link" aria-label="WhatsApp">WA</a>
-            </div>
-          </div>
         </div>
 
         <div className="footer-bottom">
           <p className="copyright">© 2026 Де Лямур. Все права защищены.</p>
-          <div className="footer-bottom-links">
-            <Link to="/privacy" className="bottom-link">Политика</Link>
-            <span className="bottom-separator">|</span>
-            <Link to="/terms" className="bottom-link">Условия</Link>
-          </div>
         </div>
       </div>
     </footer>

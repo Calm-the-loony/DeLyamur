@@ -139,18 +139,6 @@ const Catalog = () => {
         </div>
       </section>
 
-      {/* Хлебные крошки */}
-      <section className="catalog-breadcrumbs">
-        <div className="container">
-          <ul className="catalog-breadcrumbs-list">
-            <li className="catalog-breadcrumbs-item">
-              <Link to="/" className="catalog-breadcrumbs-link">Главная</Link>
-            </li>
-            <li className="catalog-breadcrumbs-item catalog-breadcrumbs-current">Каталог</li>
-          </ul>
-        </div>
-      </section>
-
       {/* Фильтры */}
       <section className="catalog-filters">
         <div className="container">

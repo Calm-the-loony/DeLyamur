@@ -240,9 +240,9 @@ const About = () => {
             
             <div className="aboutUnique-mapWrapper">
               <iframe 
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2709.7894567890123!2d39.72345678901234!3d47.23456789012345!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDfCsDE0JzA0LjQiTiAzOcKwNDMnMjQuNSJF!5e0!3m2!1sru!2sru!4v1234567890123!5m2!1sru!2sru" 
+                src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8&q=Будённовский+проспект+53,+Ростов-на-Дону&center=47.2266,39.7244&zoom=15" 
                 width="100%" 
-                height="100%" 
+                height="450" 
                 style={{ border: 0 }} 
                 allowFullScreen="" 
                 loading="lazy"

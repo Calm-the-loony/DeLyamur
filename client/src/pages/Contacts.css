@@ -89,51 +89,7 @@
   transform: rotate(-45deg);
 }
 
-/* Хлебные крошки */
-.contactsPage-breadcrumbs {
-  padding: 20px 0;
-  background-color: #fff;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.03);
-}
 
-.contactsPage-breadcrumbsList {
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 8px;
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-
-.contactsPage-breadcrumbsItem {
-  font-size: 0.85rem;
-  color: #6c757d;
-  font-weight: 300;
-  letter-spacing: 0.3px;
-}
-
-.contactsPage-breadcrumbsItem:not(:last-child)::after {
-  content: '/';
-  margin-left: 8px;
-  color: #6c757d;
-  opacity: 0.5;
-}
-
-.contactsPage-breadcrumbsLink {
-  color: #6c757d;
-  text-decoration: none;
-  transition: color 0.3s ease;
-}
-
-.contactsPage-breadcrumbsLink:hover {
-  color: #e83e8c;
-}
-
-.contactsPage-breadcrumbsCurrent {
-  color: #333;
-  font-weight: 350;
-}
 
 /* Контактная информация */
 .contactsPage-info {
@@ -436,7 +392,7 @@
     font-size: 1rem;
   }
 }
-/* Новая секция: Как заказать букет */
+
 .contactsPage-order {
   padding: 80px 0;
   background: linear-gradient(135deg, #faf0f5 0%, #fff 100%);
@@ -589,7 +545,6 @@
   margin: 0;
 }
 
-/* Адаптивность для новой секции */
 @media (max-width: 768px) {
   .contactsPage-orderCard {
     padding: 40px 30px;

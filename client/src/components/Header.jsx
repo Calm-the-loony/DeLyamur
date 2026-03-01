@@ -13,7 +13,6 @@ const Header = () => {
   const location = useLocation();
   const navigate = useNavigate();
 
-  // Закрытие поиска при клике вне области
   useEffect(() => {
     const handleClickOutside = (event) => {
       if (searchRef.current && !searchRef.current.contains(event.target)) {
@@ -28,14 +27,12 @@ const Header = () => {
     return () => document.removeEventListener('mousedown', handleClickOutside);
   }, [searchQuery]);
 
-  // Закрытие поиска при смене страницы
   useEffect(() => {
     setSearchOpen(false);
     setSearchQuery('');
     setShowResults(false);
   }, [location]);
 
-  // Поиск в реальном времени
   useEffect(() => {
     const fetchSearchResults = async () => {
       if (searchQuery.length < 2) {
@@ -49,7 +46,6 @@ const Header = () => {
         const response = await fetch(`http://localhost:5000/api/search?q=${encodeURIComponent(searchQuery)}`);
         const data = await response.json();
         
-        // Объединяем все результаты
         const allResults = [
           ...data.products.map(p => ({ ...p, type: 'product' })),
           ...data.categories.map(c => ({ ...c, type: 'category' })),
@@ -79,13 +75,11 @@ const Header = () => {
     setShowResults(false);
   };
 
-  // При клике на результат переходим на страницу поиска
   const handleResultClick = (result) => {
     setSearchOpen(false);
     setSearchQuery('');
     setShowResults(false);
     
-    // Для всех типов результатов ведём на страницу поиска с фильтром
     if (result.type === 'product') {
       navigate(`/search?q=${encodeURIComponent(result.name)}&type=products`);
     } else if (result.type === 'category') {
@@ -114,6 +108,11 @@ const Header = () => {
     }
   };
 
+  const isActive = (path) => {
+    if (path === '/' && location.pathname !== '/') return false;
+    return location.pathname === path || (path !== '/' && location.pathname.startsWith(path));
+  };
+
   return (
     <header className="header">
       <div className="container">
@@ -123,11 +122,41 @@ const Header = () => {
           </Link>
 
           <nav className={`nav ${menuOpen ? 'open' : ''}`}>
-            <Link to="/" className="nav-link" onClick={() => setMenuOpen(false)}>Главная</Link>
-            <Link to="/catalog" className="nav-link" onClick={() => setMenuOpen(false)}>Букеты</Link>
-            <Link to="/about" className="nav-link" onClick={() => setMenuOpen(false)}>О нас</Link>
-            <Link to="/delivery" className="nav-link" onClick={() => setMenuOpen(false)}>Доставка</Link>
-            <Link to="/contacts" className="nav-link" onClick={() => setMenuOpen(false)}>Контакты</Link>
+            <Link 
+              to="/" 
+              className={`nav-link ${isActive('/') ? 'active' : ''}`} 
+              onClick={() => setMenuOpen(false)}
+            >
+              Главная
+            </Link>
+            <Link 
+              to="/catalog" 
+              className={`nav-link ${isActive('/catalog') ? 'active' : ''}`} 
+              onClick={() => setMenuOpen(false)}
+            >
+              Букеты
+            </Link>
+            <Link 
+              to="/about" 
+              className={`nav-link ${isActive('/about') ? 'active' : ''}`} 
+              onClick={() => setMenuOpen(false)}
+            >
+              О нас
+            </Link>
+            <Link 
+              to="/delivery" 
+              className={`nav-link ${isActive('/delivery') ? 'active' : ''}`} 
+              onClick={() => setMenuOpen(false)}
+            >
+              Доставка
+            </Link>
+            <Link 
+              to="/contacts" 
+              className={`nav-link ${isActive('/contacts') ? 'active' : ''}`} 
+              onClick={() => setMenuOpen(false)}
+            >
+              Контакты
+            </Link>
           </nav>
 
           <div className="actions">

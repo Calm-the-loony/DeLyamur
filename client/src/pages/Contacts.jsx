@@ -127,17 +127,7 @@ const Contacts = () => {
         </div>
       </section>
 
-      {/* Хлебные крошки */}
-      <section className="contactsPage-breadcrumbs">
-        <div className="contactsPage-container">
-          <ul className="contactsPage-breadcrumbsList">
-            <li className="contactsPage-breadcrumbsItem">
-              <Link to="/" className="contactsPage-breadcrumbsLink">Главная</Link>
-            </li>
-            <li className="contactsPage-breadcrumbsItem contactsPage-breadcrumbsCurrent">Контакты</li>
-          </ul>
-        </div>
-      </section>
+
 
       {/* Контактная информация */}
       <section className="contactsPage-info">

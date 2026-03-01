@@ -98,7 +98,6 @@
   margin-top: 20px;
 }
 
-/* Категории с акцентом */
 .category-showcase {
   display: grid;
   grid-template-columns: 300px 1fr;
@@ -230,7 +229,6 @@
   border-radius: 30px;
 }
 
-/* Преимущества (как было) */
 .features-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -425,8 +423,6 @@
   background: var(--primary-color);
   transform: scale(1.3);
 }
-
-/* Блог (яркая версия) */
 .blog-preview {
   background: linear-gradient(135deg, #fff 0%, #fbfaff 100%);
   position: relative;

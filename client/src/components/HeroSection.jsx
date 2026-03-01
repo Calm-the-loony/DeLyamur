@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom'; // Добавлен импорт Link
+import { Link } from 'react-router-dom'; 
 import './HeroSection.css';
 
 const HeroSection = () => {
@@ -22,7 +22,6 @@ const HeroSection = () => {
           </p>
           
           <div className="heroSectionUnique-actions">
-            {/* Заменил <a> на Link для единообразия */}
             <Link to="/catalog" className="heroSectionUnique-link">
               Изучить коллекцию
               <span className="heroSectionUnique-arrow">→</span>

@@ -14,7 +14,6 @@ const BlogPost = () => {
       try {
         setLoading(true);
         
-        // Пробуем загрузить по id (число)
         const postRes = await fetch(`http://localhost:5000/api/blog/${id}`);
         
         if (!postRes.ok) {
@@ -24,12 +23,10 @@ const BlogPost = () => {
         const postData = await postRes.json();
         setPost(postData);
 
-        // Загружаем похожие посты (из той же категории)
         if (postData.category) {
           const relatedRes = await fetch(`http://localhost:5000/api/blog?category=${encodeURIComponent(postData.category)}`);
           const relatedData = await relatedRes.json();
           
-          // Исключаем текущий пост и берем первые 2
           const filtered = relatedData
             .filter(p => p.id !== parseInt(id))
             .slice(0, 2);
@@ -89,12 +86,10 @@ const BlogPost = () => {
     );
   }
 
-  // Разбиваем контент на абзацы
   const paragraphs = post.content ? post.content.split('\n').filter(p => p.trim()) : [];
 
   return (
     <>
-      {/* Hero секция поста */}
       <section className="blogPost-hero">
         <div className="blogPost-heroImage" style={{ backgroundImage: `url(${post.image || 'https://via.placeholder.com/1200x400'})` }}>
           <div className="blogPost-heroOverlay"></div>
@@ -120,7 +115,6 @@ const BlogPost = () => {
         </div>
       </section>
 
-      {/* Хлебные крошки */}
       <section className="blogPost-breadcrumbs">
         <div className="blogPost-container">
           <ul className="blogPost-breadcrumbsList">
@@ -137,7 +131,6 @@ const BlogPost = () => {
         </div>
       </section>
 
-      {/* Содержание поста */}
       <section className="blogPost-content">
         <div className="blogPost-container">
           <div className="blogPost-layout">
@@ -169,9 +162,7 @@ const BlogPost = () => {
               </div>
             </article>
 
-            {/* Сайдбар */}
             <aside className="blogPost-sidebar">
-              {/* Информация об авторе */}
               <div className="blogPost-author">
                 <h3 className="blogPost-authorTitle">Об авторе</h3>
                 <div className="blogPost-authorInfo">
@@ -188,8 +179,7 @@ const BlogPost = () => {
                   Она делится секретами ухода за цветами и трендами флористики.
                 </p>
               </div>
-
-              {/* Похожие статьи */}
+              
               {relatedPosts.length > 0 && (
                 <div className="blogPost-related">
                   <h3 className="blogPost-relatedTitle">Похожие статьи</h3>

@@ -34,10 +34,8 @@ const Home = () => {
         const testimonialsData = await testimonialsRes.json();
         const blogData = await blogRes.json();
 
-        // Оставляем только первые 4 категории для главной страницы
         const mainCategories = categoriesData.slice(0, 4);
         
-        // Добавляем счетчики букетов для отобранных категорий
         const categoriesWithCount = await Promise.all(
           mainCategories.map(async (category) => {
             const countRes = await fetch(`http://localhost:5000/api/products?category=${category.slug}`);
@@ -193,7 +191,6 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Преимущества (как было) */}
       <section className="features">
         <div className="container">
           <div className="section-header">
@@ -296,7 +293,7 @@ const Home = () => {
   );
 };
 
-// Компонент карточки товара (исправленный)
+// Компонент карточки товара
 const ProductCard = ({ product, isWishlist, onToggleWishlist }) => {
   return (
     <article className="product-card">

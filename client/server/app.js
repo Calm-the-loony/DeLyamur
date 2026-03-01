@@ -26,9 +26,6 @@ db.connect(err => {
     console.log('✅ Подключено к базе данных MySQL на порту 3307');
 });
 
-// ---------- API Routes ----------
-
-// Получение всех категорий
 app.get('/api/categories', (req, res) => {
     db.query('SELECT * FROM categories WHERE is_active = 1 ORDER BY sort_order', (err, results) => {
         if (err) {
@@ -39,7 +36,6 @@ app.get('/api/categories', (req, res) => {
     });
 });
 
-// Получение категории по slug
 app.get('/api/categories/:slug', (req, res) => {
     db.query('SELECT * FROM categories WHERE slug = ?', [req.params.slug], (err, results) => {
         if (err) {
@@ -50,7 +46,6 @@ app.get('/api/categories/:slug', (req, res) => {
     });
 });
 
-// Получение всех букетов (с фильтрацией)
 app.get('/api/products', (req, res) => {
     let query = `
         SELECT p.*, c.name as category_name, c.slug as category_slug,
@@ -101,7 +96,6 @@ app.get('/api/products', (req, res) => {
     });
 });
 
-// Получение одного букета по slug
 app.get('/api/products/:slug', (req, res) => {
     const query = `
         SELECT p.*, c.name as category_name, c.slug as category_slug
@@ -135,7 +129,6 @@ app.get('/api/products/:slug', (req, res) => {
     });
 });
 
-// Поиск по букетам
 app.get('/api/search', (req, res) => {
     const searchTerm = req.query.q;
     
@@ -183,9 +176,6 @@ app.get('/api/search', (req, res) => {
     });
 });
 
-// ---------- БЛОГ МАРШРУТЫ ----------
-
-// Получение всех статей блога
 app.get('/api/blog', (req, res) => {
     let query = 'SELECT * FROM blog_posts WHERE is_published = 1';
     const params = [];
@@ -207,7 +197,6 @@ app.get('/api/blog', (req, res) => {
     });
 });
 
-// Получение одной статьи блога по ID
 app.get('/api/blog/:id', (req, res) => {
     const id = req.params.id;
     console.log('Запрос статьи с ID:', id);
@@ -230,7 +219,6 @@ app.get('/api/blog/:id', (req, res) => {
         const post = results[0];
         console.log('Статья найдена:', post.title);
         
-        // Увеличиваем счетчик просмотров
         db.query('UPDATE blog_posts SET views_count = views_count + 1 WHERE id = ?', [id], (updateErr) => {
             if (updateErr) {
                 console.error('Ошибка обновления просмотров:', updateErr);
@@ -241,7 +229,6 @@ app.get('/api/blog/:id', (req, res) => {
     });
 });
 
-// Получение популярных букетов (для главной)
 app.get('/api/popular-products', (req, res) => {
     const query = `
         SELECT p.*, 
@@ -261,7 +248,6 @@ app.get('/api/popular-products', (req, res) => {
     });
 });
 
-// Получение отзывов
 app.get('/api/testimonials', (req, res) => {
     db.query(
         'SELECT * FROM testimonials WHERE is_published = 1 ORDER BY date DESC',
@@ -275,7 +261,6 @@ app.get('/api/testimonials', (req, res) => {
     );
 });
 
-// Получение команды
 app.get('/api/team', (req, res) => {
     db.query(
         'SELECT * FROM team WHERE is_active = 1 ORDER BY sort_order',
@@ -289,7 +274,6 @@ app.get('/api/team', (req, res) => {
     );
 });
 
-// Получение настроек сайта
 app.get('/api/settings', (req, res) => {
     db.query('SELECT * FROM settings', (err, results) => {
         if (err) {
@@ -306,9 +290,8 @@ app.get('/api/settings', (req, res) => {
     });
 });
 
-// Запуск сервера
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
-    console.log(`🚀 Сервер запущен на порту ${PORT}`);
-    console.log(`📦 База данных: ${process.env.DB_NAME || 'flower_shop'}`);
+    console.log(`Сервер запущен на порту ${PORT}`);
+    console.log(`База данных: ${process.env.DB_NAME || 'flower_shop'}`);
 });
